@@ -12,6 +12,10 @@ module.exports = {
       type:'string'
     },
   },
+  
+  rmovie:{
+    model: 'movies'
+  }
 
 };
 
