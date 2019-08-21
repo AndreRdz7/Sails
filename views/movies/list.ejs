@@ -1,0 +1,23 @@
+<h1>All movies</h1>
+<%= JSON.stringify(movies) %>
+<table class="table table-striped">
+  <tr>
+    <th scope="col">Title</th>
+    <th scope="col">Rating</th>
+    <th scope="col">Release date</th>
+    <th scope="col">Manage</th>
+  </tr>
+  <% movies.forEach(function(movie) {%>
+    <tr>
+        <td><%= movie.title %></td>
+        <td><%= movie.rating %></td>
+        <td><%= movie.release_date %></td>
+        <td>
+            <button class="btn btn-outline-dark">Show</button>
+            <button class="btn btn-outline-secondary">Edit</button>
+            <button class="btn btn-outline-danger">Delete</button>
+        </td>
+    </tr>
+  <%});%>
+</table>
+<a class="btn btn-outline-primary" href="/movies/new" role="button">Add a new movie</a>
